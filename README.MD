@@ -34,3 +34,4 @@ Interesting things to investigate would be to
 * Additionally the usage of the clock buttons for e.g. IFTTT.
 * Integration with GADGETBRIDGE to use a more sophisticated plattform.
 * Investigate even more the bluetooth protocol to find functions not yet known.
+* Snychronize the Alarm with the Standard Application in Android & iOS
