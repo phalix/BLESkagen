@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="io.gvox.plugin.phonecalltrap"
+      version="0.1.2">
+    <name>PhoneCallTrap</name>
+    <description>A phone call trap</description>
+    <license>MIT</license>
+    <keywords>phonegap,calendar, phone, call, phone-call</keywords>
+
+
+    <js-module src="www/PhoneCallTrap.js" name="PhoneCallTrap">
+        <clobbers target="window.PhoneCallTrap" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PhoneCallTrap">
+                <param name="android-package" value="io.gvox.phonecalltrap.PhoneCallTrap" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        </config-file>
+
+        <source-file src="src/android/PhoneCallTrap.java" target-dir="src/io/gvox/phonecalltrap" />
+     </platform>
+</plugin>

@@ -1,0 +1,150 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-device",
+        "scope": null,
+        "escapedName": "cordova-plugin-device",
+        "name": "cordova-plugin-device",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/sehrbastian/Entwicklung/BLESkagen"
+    ]
+  ],
+  "_from": "cordova-plugin-device@latest",
+  "_id": "cordova-plugin-device@2.0.2",
+  "_inCache": true,
+  "_location": "/cordova-plugin-device",
+  "_nodeVersion": "6.6.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-device_2.0.2_1523945189482_0.27753081894529075"
+  },
+  "_npmUser": {
+    "name": "stevegill",
+    "email": "stevengill97@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-device",
+    "scope": null,
+    "escapedName": "cordova-plugin-device",
+    "name": "cordova-plugin-device",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-device/-/cordova-plugin-device-2.0.2.tgz",
+  "_shasum": "fc08f3722e67eef7b6c67bfc99a83df6add0baba",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-device",
+  "_where": "/Users/sehrbastian/Entwicklung/BLESkagen",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://issues.apache.org/jira/browse/CB"
+  },
+  "cordova": {
+    "id": "cordova-plugin-device",
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "browser",
+      "osx"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova Device Plugin",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-semistandard": "^11.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "fc08f3722e67eef7b6c67bfc99a83df6add0baba",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-device/-/cordova-plugin-device-2.0.2.tgz",
+    "fileCount": 41,
+    "unpackedSize": 191630,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa1Y7mCRA9TVsSAnZWagAA/JsP/RHF42hPQSqpa3FYSHKq\nPnGJ/LZYyDy0QV3TszYNjcop1AgdAo8lGM3gX2f1FRj5ZwCX75w8YhqUF6St\nHgtNWdJvpSvF9zusVdP280ww7FhRPX/B81HxJhj41kwrsHS2dmIfuk5QQUEN\nznKsduyjoFWuVDCkvz6gD+qjlOpiH8DE9iFng56l1ky5IOmUYRixXAxeZVGc\nqxED1bHBmb7mkOiRfd6ZSIDAcYVrmoFanXgHSj3WHvDeSV0CNn+9naLnP1ql\nX5XrKYGRVV4NEWZVbhu1yExDlyNHbVsiKlCh0WPTM7T13FwRL9J2/9GDslKI\n/ga9sVmHbkvrpXbIpAGbRnKMghn99vR7eAGrwLDNdagRA50uZMPR4G5oTgkh\nBPQXfG8sHam2JcORxTytNgpQ29yXlDx5R1QotLeFaWs6+mtJJeEOK397Jcr2\n3esJqtpHKXN643qKU2EN5QSFGyAjky9qs86mMZpkwbabqpAaehwLaZf/LQzr\nUbv7RNV7AW6BN00EcEvUtNUneHQdolsjqxYTfiG4+loqwBW54PxX+O2Y8PPj\nHeku2upoSsZTQXeiWJIfNZwbJMJccT+gTtx64gTtMO/PEaJvvGshc7/Xx+gn\nXFH1N9rRkSOj34np12o6gNbGIT2o8BeXVrOGv+wrPrl8vu93yraqKwcYx3Ok\nn5mm\r\n=2KcM\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-device#readme",
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows",
+    "cordova-browser",
+    "cordova-osx"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "bowserj",
+      "email": "bowserj@apache.org"
+    },
+    {
+      "name": "csantanapr",
+      "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "filmaj",
+      "email": "maj.fil@gmail.com"
+    },
+    {
+      "name": "jcesarmobile",
+      "email": "jcesarmobile@gmail.com"
+    },
+    {
+      "name": "macdonst",
+      "email": "simon.macdonald@gmail.com"
+    },
+    {
+      "name": "purplecabbage",
+      "email": "purplecabbage@gmail.com"
+    },
+    {
+      "name": "shazron",
+      "email": "shazron@gmail.com"
+    },
+    {
+      "name": "stevegill",
+      "email": "stevengill97@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-device",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-device.git"
+  },
+  "scripts": {
+    "eslint": "node node_modules/eslint/bin/eslint www && node node_modules/eslint/bin/eslint src && node node_modules/eslint/bin/eslint tests",
+    "test": "npm run eslint"
+  },
+  "types": "./types/index.d.ts",
+  "version": "2.0.2"
+}

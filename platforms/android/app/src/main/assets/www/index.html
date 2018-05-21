@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+          <div id="bluetoothselector">
+            <h1> Select an already Connected Smartwatch </h1>
+            <table>
+                <thead>
+                    <tr><th>Address</th><th>Name</th></tr>
+                </thead>
+                <tbody data-bind="foreach: devices">
+                    <tr>
+                        <td data-bind="text: address"></td>
+                        <td data-bind="text: name"></td>
+                        <td><button data-bind="click: $parent.selectDevice">Select</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button data-bind="click: refreshDevices">Refresh</button>
+            <div>Connected to <b data-bind="text: selectedDeviceAddress"></b></div>
+          </div>
+          <div id="batteryInfo">
+            <button data-bind="click: fetchBatteryLevel">Get Battery Level</button>
+            <b data-bind="text: batterylevel"></b>
+          </div>
+          <div id="notifier">
+            <button data-bind="click: notify">Notifiy</button>
+          </div>
+          <div id="listener">
+            <h3>General Notification</h3>
+            <button data-bind="click: changeStateGN, text:activeGN() ? 'Active' : 'Inactive' "></button>
+            <table style="left: -70px;font-size: 7pt;position: relative;">
+                <thead>
+                    <tr><th>Package</th><th>Active</th><th>Pattern</th><th>Indicator</th></tr>
+                </thead>
+                <tbody data-bind="foreach: packages">
+                    <tr>
+                        <td data-bind="text: package"></td>
+                        <td><select data-bind="options: availableStates, value:active"></select></td>
+                        <td><select data-bind="options: availablePatterns, value:pattern"></select></td>
+                        <td><select data-bind="options: availableIndicators, value:indicator"></select></td>
+                        <td><button data-bind="click: changeStatePackage">Save</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button data-bind="click: update">Refresh</button>
+
+          </div>
+          <div id="phone">
+            <h3>Phone Call Notification</h3>
+            <button data-bind="click: changeState, text:active() ? 'Active' : 'Inactive' "></button>
+            <div>
+              <h4>Vibrating Pattern</h4>
+              <b data-bind="text: vibratingPattern"></b>
+              <button data-bind="click: setVibratingPattern04">04</button>
+              <button data-bind="click: setVibratingPattern05">05</button>
+              <button data-bind="click: setVibratingPattern06">06</button>
+              <button data-bind="click: setVibratingPattern07">07</button>
+              <button data-bind="click: setVibratingPattern08">08</button>
+            </div>
+            <br/>
+            <h4>Indicator</h4>
+            <select data-bind="options: availableIndicatorsPhone, value:indicatorPhone"></select>
+            <br/>
+            <br/>
+          </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/skagenprotocol.js"></script>
+        <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

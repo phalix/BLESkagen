@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-background-mode",
+        "scope": null,
+        "escapedName": "cordova-plugin-background-mode",
+        "name": "cordova-plugin-background-mode",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/sehrbastian/Entwicklung/BLESkagen"
+    ]
+  ],
+  "_from": "cordova-plugin-background-mode@latest",
+  "_id": "cordova-plugin-background-mode@0.7.2",
+  "_inCache": true,
+  "_location": "/cordova-plugin-background-mode",
+  "_nodeVersion": "4.6.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-background-mode-0.7.2.tgz_1486048048070_0.6227372635621578"
+  },
+  "_npmUser": {
+    "name": "katzer",
+    "email": "katzer@appplant.de"
+  },
+  "_npmVersion": "4.0.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-background-mode",
+    "scope": null,
+    "escapedName": "cordova-plugin-background-mode",
+    "name": "cordova-plugin-background-mode",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-background-mode/-/cordova-plugin-background-mode-0.7.2.tgz",
+  "_shasum": "eaf5639c065a87231b3ecf757a6e28b101d0332f",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-background-mode",
+  "_where": "/Users/sehrbastian/Entwicklung/BLESkagen",
+  "author": {
+    "name": "Sebastián Katzer"
+  },
+  "bugs": {
+    "url": "https://github.com/katzer/cordova-plugin-background-mode/issues"
+  },
+  "dependencies": {},
+  "description": "Prevent app from going to sleep in background.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "eaf5639c065a87231b3ecf757a6e28b101d0332f",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-background-mode/-/cordova-plugin-background-mode-0.7.2.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6.0.0"
+    }
+  ],
+  "gitHead": "892b4150ff803517939b75b0bbe052e01eb62dac",
+  "homepage": "https://github.com/katzer/cordova-plugin-background-mode#readme",
+  "keywords": [
+    "appplant",
+    "background",
+    "cordova",
+    "ecosystem:cordova"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "katzer",
+      "email": "katzer@appplant.de"
+    }
+  ],
+  "name": "cordova-plugin-background-mode",
+  "optionalDependencies": {},
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katzer/cordova-plugin-background-mode.git"
+  },
+  "scripts": {},
+  "version": "0.7.2"
+}

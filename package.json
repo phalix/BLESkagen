@@ -1,0 +1,39 @@
+{
+  "name": "bleskagen",
+  "displayName": "BLESkagen",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova-android": "^7.0.0",
+    "cordova-browser": "^5.0.3",
+    "cordova-plugin-background-mode": "^0.7.2",
+    "cordova-plugin-ble": "^2.0.1",
+    "cordova-plugin-bluetoothle": "^4.4.3",
+    "cordova-plugin-broadcaster": "^3.1.1",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "io.gvox.plugin.phonecalltrap": "^0.1.2",
+    "net.coconauts.notification-listener": "file:///Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-ble": {},
+      "cordova-plugin-bluetoothle": {},
+      "io.gvox.plugin.phonecalltrap": {},
+      "cordova-plugin-broadcaster": {},
+      "net.coconauts.notification-listener": {},
+      "cordova-plugin-background-mode": {}
+    },
+    "platforms": [
+      "browser",
+      "android"
+    ]
+  }
+}

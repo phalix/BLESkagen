@@ -1,0 +1,66 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova",
+        "spec": "/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova",
+        "type": "directory"
+      },
+      "/Users/sehrbastian/Entwicklung/BLESkagen"
+    ]
+  ],
+  "_from": "../NotificationListenerService/NotificationListener-cordova",
+  "_id": "net.coconauts.notification-listener@0.0.1",
+  "_inCache": true,
+  "_location": "/net.coconauts.notification-listener",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova",
+    "spec": "/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "file:../NotificationListenerService/NotificationListener-cordova",
+  "_shasum": "359583cf132df2a43a49e2ee2e76f10c5a1f7390",
+  "_shrinkwrap": null,
+  "_spec": "/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova",
+  "_where": "/Users/sehrbastian/Entwicklung/BLESkagen",
+  "cordova_name": "Notification-listener",
+  "dependencies": {},
+  "description": "Notification listener Plugin for Android",
+  "devDependencies": {},
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.1.0"
+    }
+  ],
+  "gitHead": "dd5718aa64d2d36187da5bb6667bb68d0a3a9e53",
+  "issue": "https://github.com/coconauts/NotificationListener-cordova/issues",
+  "keywords": [
+    "notification",
+    "listener",
+    "android"
+  ],
+  "license": "Apache 2.0",
+  "name": "net.coconauts.notification-listener",
+  "optionalDependencies": {},
+  "platforms": [
+    "android"
+  ],
+  "readme": "# NotificationListenerService plugin for Cordova\n\nThis is an implementation of the\n[NotificationListenerService in Android](https://developer.android.com/reference/android/service/notification/NotificationListenerService.html)\nfor Cordova.\n\n    A service that receives calls from the system when new notifications are posted or removed, or their ranking changed.\n\nNote: This plugin doesn't work for IOS or Windows Phone, feel free to create a pull request if you want to add that functionality to this project.\n\n## How to install\n\n    cordova plugin add https://github.com/coconauts/NotificationListener-cordova\n\n## Enable notification listener service\n\nThis service requires an special permission that must be enabled from settings on Android (Settings > Notifications > Notification access)\n\n![](/settings.jpg)\n\nNote: The app requires the following permission in your Manifest file on Android, which will be added automatically:\n\n    android.permission.BIND_NOTIFICATION_LISTENER_SERVICE\n\n## How to use\n\nOn Cordova initialization, add the callback for your notification-listener.\nThen everytime you get a notification in your phone that callback in JS will be triggered with the notification data.\n\n```\nvar app = {\n    initialize: function() {\n       console.log(\"Initializing app\");\n       this.bindEvents();\n    },\n    bindEvents: function() {\n        console.log(\"Binding events\");\n        document.addEventListener('deviceready', this.onDeviceReady, false);\n    },\n    onDeviceReady: function() {\n       console.log(\"Device ready\");\n\n       notificationListener.listen(function(n){\n         console.log(\"Received notification \" + JSON.stringify(n) );\n       }, function(e){\n         console.log(\"Notification Error \" + e);\n       });\n    }\n};\napp.initialize();\n```\n\nFor a full example, please see our [WatchDuino2 repository](https://github.com/coconauts/watchduino2-companion-app)\n\n## Sample output\n```\nReceived notification\n{\n  \"title\":\"Chuck Norris\",\n  \"package\":\"com.google.android.talk\",\n  \"text\":\"Hello world\",\n  \"textLines\":\"\"\n}\n```\n\n## Notification response format\n\nThe notification response received by Javascript is a simplified object from the\n[StatusBarNotification class](https://developer.android.com/reference/android/service/notification/StatusBarNotification.html)\nin Android.\n\nFeel free to update the\n [notification parser](https://github.com/coconauts/NotificationListener-cordova/blob/master/src/android/NotificationCommands.java#L80) \n inside this plugin if needed.\n",
+  "readmeFilename": "README.md",
+  "repo": "https://github.com/coconauts/NotificationListener-cordova",
+  "version": "0.0.1"
+}

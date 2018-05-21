@@ -1,0 +1,37 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-ble": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "cordova-plugin-bluetoothle": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "cordova-plugin-broadcaster": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "io.gvox.plugin.phonecalltrap": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "net.coconauts.notification-listener": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    }
+  }
+}

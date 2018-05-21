@@ -1,0 +1,106 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-broadcaster@3.1.1",
+        "scope": null,
+        "escapedName": "cordova-plugin-broadcaster",
+        "name": "cordova-plugin-broadcaster",
+        "rawSpec": "3.1.1",
+        "spec": "3.1.1",
+        "type": "version"
+      },
+      "/Users/sehrbastian/Entwicklung/BLESkagen"
+    ]
+  ],
+  "_from": "cordova-plugin-broadcaster@3.1.1",
+  "_id": "cordova-plugin-broadcaster@3.1.1",
+  "_inCache": true,
+  "_location": "/cordova-plugin-broadcaster",
+  "_nodeVersion": "8.5.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-broadcaster_3.1.1_1526210260562_0.0747910398939926"
+  },
+  "_npmUser": {
+    "name": "bsorrentino",
+    "email": "bartolomeo.sorrentino@gmail.com"
+  },
+  "_npmVersion": "6.0.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-broadcaster@3.1.1",
+    "scope": null,
+    "escapedName": "cordova-plugin-broadcaster",
+    "name": "cordova-plugin-broadcaster",
+    "rawSpec": "3.1.1",
+    "spec": "3.1.1",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-broadcaster/-/cordova-plugin-broadcaster-3.1.1.tgz",
+  "_shasum": "10d2e08c4c5a2f460932c89181df74b24ec80691",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-broadcaster@3.1.1",
+  "_where": "/Users/sehrbastian/Entwicklung/BLESkagen",
+  "author": {
+    "name": "bsorrentino"
+  },
+  "bugs": {
+    "url": "https://github.com/bsorrentino/cordova-broadcaster/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-broadcaster",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Allow send message from Javascript to Native",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-bnd79mfjYTGQVkohwdtjqzT8ylhAa0O78zjePTzLUP9UM4mOxfxZY3Ry0QzuA+6PJ4VYHAoupCOvtmDxc5oxTw==",
+    "shasum": "10d2e08c4c5a2f460932c89181df74b24ec80691",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-broadcaster/-/cordova-plugin-broadcaster-3.1.1.tgz",
+    "fileCount": 10,
+    "unpackedSize": 28006,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa+B7VCRA9TVsSAnZWagAAGdUP/0bSu1Q3ITki+xNCrhxn\nwJer48mSEeauQfqG2tdQJkjcntaofJhyoWfvIvRGoOApA3V6pQ5xOfXTVWSW\ngW5u8Oo8gIqCSc16aUxZymiNoCFJHmwTRI2Sh5tNW1+hUE6pt4y5uTrE6NZ+\n6yYTXqcyFlR/gtRRF9BiOGVuMkwPh9KgtxCPKHKunAxiSO8tmd+X9Qm0aqiS\nOkmtP8Gdo7Hk/TLFoRBOoofC8QtZECTkoAVU3jECvxVX05OU695p098zOuM1\nTOx/kQOlEE0ky05F+mnnx9NgXxxS92PnB2JAsKsm14J7/ylNr9IriyxONPUR\n5xfx3lim2wNqaipQtuh+aajGaBQ8ruK4pmgPoR2tx60M7YVscu847PW27Hz7\n7edmuHkCd9BfnqtpIvXrm9r1H8+m3mF9kAUNGLucQZdYmJxUtt/YAz3vZ+b4\nxX2eh09amzrFljNd+pQ0ZocSIDQSy5F0HX5VVThSSk1NEeFUibP1k2zRbTWJ\nVWPFSWoqDjhSoFdFSBaLUEyaska+bM1lLjIGZ8ETShIqz38p4vnyKCaFYLcE\n8AixAVh6XayQl5e7B3A2geue9Hh0V/GtgFH1awyaO3IibUFEd8qojWQWN0eU\nAKtbJcSagfUH+bkTPN6vCdeYWepeVQG3d/AGzL07xOPifa1tSIC5elTFVeuR\n6EU9\r\n=CxXs\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "2.2.1": {
+        "cordova": ">3.9.0"
+      },
+      "2.3.0": {
+        "cordova": ">4.0.0"
+      }
+    }
+  },
+  "gitHead": "6b02110e66f56c3c86dc26745cf697fe62c03a56",
+  "homepage": "https://github.com/bsorrentino/cordova-broadcaster#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "bsorrentino",
+      "email": "bartolomeo.sorrentino@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-broadcaster",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsorrentino/cordova-broadcaster.git"
+  },
+  "version": "3.1.1"
+}

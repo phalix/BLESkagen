@@ -1,0 +1,99 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "io.gvox.plugin.phonecalltrap",
+        "scope": null,
+        "escapedName": "io.gvox.plugin.phonecalltrap",
+        "name": "io.gvox.plugin.phonecalltrap",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/sehrbastian/Entwicklung/BLESkagen"
+    ]
+  ],
+  "_from": "io.gvox.plugin.phonecalltrap@latest",
+  "_id": "io.gvox.plugin.phonecalltrap@0.1.2",
+  "_inCache": true,
+  "_location": "/io.gvox.plugin.phonecalltrap",
+  "_nodeVersion": "5.3.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/io.gvox.plugin.phonecalltrap-0.1.2.tgz_1465320357675_0.3698872602544725"
+  },
+  "_npmUser": {
+    "name": "renan.gpa",
+    "email": "renan@renanoliveira.net"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "io.gvox.plugin.phonecalltrap",
+    "scope": null,
+    "escapedName": "io.gvox.plugin.phonecalltrap",
+    "name": "io.gvox.plugin.phonecalltrap",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/io.gvox.plugin.phonecalltrap/-/io.gvox.plugin.phonecalltrap-0.1.2.tgz",
+  "_shasum": "26f2539d6b935bffe9b581070d2d5827658d243b",
+  "_shrinkwrap": null,
+  "_spec": "io.gvox.plugin.phonecalltrap",
+  "_where": "/Users/sehrbastian/Entwicklung/BLESkagen",
+  "author": {
+    "name": "Renan Oliveira and Felipe Ferreira"
+  },
+  "bugs": {
+    "url": "https://github.com/renanoliveira/cordova-phone-call-trap/issues"
+  },
+  "cordova": {
+    "id": "io.gvox.plugin.phonecalltrap",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "A phone call trap",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "26f2539d6b935bffe9b581070d2d5827658d243b",
+    "tarball": "https://registry.npmjs.org/io.gvox.plugin.phonecalltrap/-/io.gvox.plugin.phonecalltrap-0.1.2.tgz"
+  },
+  "gitHead": "66b43ee41da1d00c28b91e3dfd4ab683818b5161",
+  "homepage": "https://github.com/renanoliveira/cordova-phone-call-trap#readme",
+  "keywords": [
+    "phonegap",
+    "calendar",
+    "phone",
+    "call",
+    "phone-call",
+    "ringing",
+    "phone-state",
+    "call-state",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "renan.gpa",
+      "email": "renan@renanoliveira.net"
+    }
+  ],
+  "name": "io.gvox.plugin.phonecalltrap",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renanoliveira/cordova-phone-call-trap.git"
+  },
+  "scripts": {},
+  "version": "0.1.2"
+}
