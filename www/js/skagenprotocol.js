@@ -4,17 +4,12 @@ var discoverConnectedDevices = function(){
   var promise = new Promise(function(resolve,reject){
     bluetoothle.initialize(function(){
       bluetoothle.retrieveConnected(function(e){
-        //console.log(e);
-        //mac = e.filter(el => el.address = "CC:1C:40:F0:A0:30")[0].address;
+        
         resolve(e);
         error=true;
       }, function(e){reject();alert(e)})
     })
   })
-
-  /*while(mac==undefined&&error==false){
-
-  }*/
   return promise;
 }
 
@@ -33,7 +28,7 @@ var connect = function(mac){
      function(device)
      {
          console.log('Disconnected from device: ' + device.name);
-         reject()
+         reject();
      },
      function(errorCode)
      {
@@ -92,7 +87,7 @@ var signalMessage = function(skagendevice){
    4b = 2,5
    5a = 3
    */
-  signalMessage_advanced(skagendevice,vibratingpattern_10_11,hourindicator_24_25,minuteindicator_20_21);
+  return signalMessage_advanced(skagendevice,vibratingpattern_10_11,hourindicator_24_25,minuteindicator_20_21);
 }
 
  var signalMessage_advanced = function(skagendevice,vibratingpattern_10_11,hourindicator_24_25,minuteindicator_20_21){

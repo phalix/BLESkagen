@@ -22,10 +22,10 @@
     "io.gvox.plugin.phonecalltrap": {
       "PACKAGE_NAME": "com.Bittmann.BLESkagen"
     },
-    "net.coconauts.notification-listener": {
+    "cordova-plugin-background-mode": {
       "PACKAGE_NAME": "com.Bittmann.BLESkagen"
     },
-    "cordova-plugin-background-mode": {
+    "net.coconauts.notification-listener": {
       "PACKAGE_NAME": "com.Bittmann.BLESkagen"
     }
   },

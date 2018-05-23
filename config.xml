@@ -27,8 +27,8 @@
     <plugin name="cordova-plugin-bluetoothle" spec="^4.4.3" />
     <plugin name="io.gvox.plugin.phonecalltrap" spec="^0.1.2" />
     <plugin name="cordova-plugin-broadcaster" spec="^3.1.1" />
-    <plugin name="net.coconauts.notification-listener" spec="/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova" />
     <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
+    <plugin name="net.coconauts.notification-listener" spec="/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova" />
     <engine name="browser" spec="^5.0.3" />
     <engine name="android" spec="^7.0.0" />
 </widget>

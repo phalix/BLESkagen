@@ -28,8 +28,8 @@
       "cordova-plugin-bluetoothle": {},
       "io.gvox.plugin.phonecalltrap": {},
       "cordova-plugin-broadcaster": {},
-      "net.coconauts.notification-listener": {},
-      "cordova-plugin-background-mode": {}
+      "cordova-plugin-background-mode": {},
+      "net.coconauts.notification-listener": {}
     },
     "platforms": [
       "browser",

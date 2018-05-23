@@ -63,17 +63,43 @@ var readBatteryLevel = function(skagendevice){
 
 }
 
- var signalMessage = function(skagendevice){
+var calculateIndicator = function(number_0_to_11){
+  number_0_to_11 = Math.max(number_0_to_11,0);
+  number_0_to_11 = Math.min(number_0_to_11,11);
+  number_0_to_11 = number_0_to_11 * 30;
+  hexString = number_0_to_11.toString(16);
+  if(hexString.length==1){
+    hexString = "0"+hexString;
+  }
+  return hexString;
+
+
+}
+
+var signalMessage = function(skagendevice){
+  var vibratingpattern_10_11 = "04"
+  /*
+   08 = quite long
+   04 = short
+   05 = long
+   06 = two times long
+  */
+  var hourindicator_24_25 = "1e"
+  var minuteindicator_20_21 = "1e"
+   /*
+   1e = 1
+   3c = 2
+   4b = 2,5
+   5a = 3
+   */
+  signalMessage_advanced(skagendevice,vibratingpattern_10_11,hourindicator_24_25,minuteindicator_20_21);
+}
+
+ var signalMessage_advanced = function(skagendevice,vibratingpattern_10_11,hourindicator_24_25,minuteindicator_20_21){
 
 
    var initmessage_0_3 = "0207"
-   var vibratingpattern_10_11 = "04"
-   /*
-    08 = quite long
-    04 = short
-    05 = long
-    06 = two times long
-   */
+
    var useindicator_12_13 = "05"
    /*
     05 = yes
@@ -87,15 +113,7 @@ var readBatteryLevel = function(skagendevice){
    */
    var onlyvibrate_16_17 = "b8"
    var displaytime_18_19 = "0b"
-   var minuteindicator_20_21 = "1e"
-    /*
-    1e = 1
-    3c = 2
-    4b = 2,5
-    5a = 3
-    */
 
-   var hourindicator_24_25 = "1e"
    var toSend = initmessage_0_3
                 +"0f0a00" //seems to be a fixed value.
                 +vibratingpattern_10_11

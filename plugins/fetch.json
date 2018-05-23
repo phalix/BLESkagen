@@ -63,18 +63,18 @@
     "is_top_level": true,
     "variables": {}
   },
-  "net.coconauts.notification-listener": {
-    "source": {
-      "type": "local",
-      "path": "/Users/sehrbastian/Entwicklung/BLESkagen/node_modules/net.coconauts.notification-listener"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-background-mode": {
     "source": {
       "type": "registry",
       "id": "cordova-plugin-background-mode"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "net.coconauts.notification-listener": {
+    "source": {
+      "type": "local",
+      "path": "/Users/sehrbastian/Entwicklung/BLESkagen/node_modules/net.coconauts.notification-listener"
     },
     "is_top_level": true,
     "variables": {}

@@ -16,14 +16,14 @@
     <feature name="PhoneCallTrap">
         <param name="android-package" value="io.gvox.phonecalltrap.PhoneCallTrap" />
     </feature>
-    <feature name="NotificationListener">
-        <param name="android-package" value="net.coconauts.notificationListener.NotificationCommands" />
-    </feature>
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
     <feature name="BackgroundMode">
         <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundMode" />
+    </feature>
+    <feature name="NotificationListener">
+        <param name="android-package" value="net.coconauts.notificationListener.NotificationCommands" />
     </feature>
     <name>BLESkagen</name>
     <description>

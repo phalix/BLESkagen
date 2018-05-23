@@ -39,14 +39,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/net.coconauts.notification-listener/www/notification-listener.js",
-        "id": "net.coconauts.notification-listener.NotificationListener",
-        "pluginId": "net.coconauts.notification-listener",
-        "clobbers": [
-            "notificationListener"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
         "pluginId": "cordova-plugin-device",
@@ -74,6 +66,14 @@ module.exports = [
         "id": "cordova-plugin-background-mode.BackgroundMode.Proxy",
         "pluginId": "cordova-plugin-background-mode",
         "runs": true
+    },
+    {
+        "file": "plugins/net.coconauts.notification-listener/www/notification-listener.js",
+        "id": "net.coconauts.notification-listener.NotificationListener",
+        "pluginId": "net.coconauts.notification-listener",
+        "clobbers": [
+            "notificationListener"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -84,9 +84,9 @@ module.exports.metadata =
     "cordova-plugin-bluetoothle": "4.4.3",
     "io.gvox.plugin.phonecalltrap": "0.1.2",
     "cordova-plugin-broadcaster": "3.1.1",
-    "net.coconauts.notification-listener": "0.0.2",
     "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-background-mode": "0.7.2"
+    "cordova-plugin-background-mode": "0.7.2",
+    "net.coconauts.notification-listener": "0.0.2"
 }
 // BOTTOM OF METADATA
 });

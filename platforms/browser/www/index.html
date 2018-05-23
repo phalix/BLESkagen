@@ -62,6 +62,44 @@
           <div id="notifier">
             <button data-bind="click: notify">Notifiy</button>
           </div>
+          <div id="listener">
+            <h3>General Notification</h3>
+            <button data-bind="click: changeStateGN, text:activeGN() ? 'Active' : 'Inactive' "></button>
+            <table style="left: -70px;font-size: 7pt;position: relative;">
+                <thead>
+                    <tr><th>Package</th><th>Active</th><th>Pattern</th><th>Indicator</th></tr>
+                </thead>
+                <tbody data-bind="foreach: packages">
+                    <tr>
+                        <td data-bind="text: package"></td>
+                        <td><select data-bind="options: availableStates, value:active"></select></td>
+                        <td><select data-bind="options: availablePatterns, value:pattern"></select></td>
+                        <td><select data-bind="options: availableIndicators, value:indicator"></select></td>
+                        <td><button data-bind="click: changeStatePackage">Save</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button data-bind="click: update">Refresh</button>
+
+          </div>
+          <div id="phone">
+            <h3>Phone Call Notification</h3>
+            <button data-bind="click: changeState, text:active() ? 'Active' : 'Inactive' "></button>
+            <div>
+              <h4>Vibrating Pattern</h4>
+              <b data-bind="text: vibratingPattern"></b>
+              <button data-bind="click: setVibratingPattern04">04</button>
+              <button data-bind="click: setVibratingPattern05">05</button>
+              <button data-bind="click: setVibratingPattern06">06</button>
+              <button data-bind="click: setVibratingPattern07">07</button>
+              <button data-bind="click: setVibratingPattern08">08</button>
+            </div>
+            <br/>
+            <h4>Indicator</h4>
+            <select data-bind="options: availableIndicatorsPhone, value:indicatorPhone"></select>
+            <br/>
+            <br/>
+          </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/skagenprotocol.js"></script>

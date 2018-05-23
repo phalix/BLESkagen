@@ -41,13 +41,13 @@
     "cordova-plugin-broadcaster": {
       "PACKAGE_NAME": "com.Bittmann.BLESkagen"
     },
-    "net.coconauts.notification-listener": {
-      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
-    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.Bittmann.BLESkagen"
     },
     "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "net.coconauts.notification-listener": {
       "PACKAGE_NAME": "com.Bittmann.BLESkagen"
     }
   },
@@ -92,14 +92,6 @@
       "runs": true
     },
     {
-      "file": "plugins/net.coconauts.notification-listener/www/notification-listener.js",
-      "id": "net.coconauts.notification-listener.NotificationListener",
-      "pluginId": "net.coconauts.notification-listener",
-      "clobbers": [
-        "notificationListener"
-      ]
-    },
-    {
       "file": "plugins/cordova-plugin-device/www/device.js",
       "id": "cordova-plugin-device.device",
       "pluginId": "cordova-plugin-device",
@@ -127,6 +119,14 @@
       "id": "cordova-plugin-background-mode.BackgroundMode.Proxy",
       "pluginId": "cordova-plugin-background-mode",
       "runs": true
+    },
+    {
+      "file": "plugins/net.coconauts.notification-listener/www/notification-listener.js",
+      "id": "net.coconauts.notification-listener.NotificationListener",
+      "pluginId": "net.coconauts.notification-listener",
+      "clobbers": [
+        "notificationListener"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -135,8 +135,8 @@
     "cordova-plugin-bluetoothle": "4.4.3",
     "io.gvox.plugin.phonecalltrap": "0.1.2",
     "cordova-plugin-broadcaster": "3.1.1",
-    "net.coconauts.notification-listener": "0.0.2",
     "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-background-mode": "0.7.2"
+    "cordova-plugin-background-mode": "0.7.2",
+    "net.coconauts.notification-listener": "0.0.2"
   }
 }
