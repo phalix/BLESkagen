@@ -18,6 +18,9 @@ cordova run android
 ```
 ios or other os were never tested.
 
+![App Screenshot](https://user-images.githubusercontent.com/2444534/42414681-86897ba0-823a-11e8-97e2-15a8cecce4d8.jpg)
+
+
 ## Plugins used
 * cordova-plugin-background-mode 0.7.2 "BackgroundMode"
 * cordova-plugin-ble 2.0.1 "Evothings BLE API"
