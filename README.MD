@@ -27,6 +27,7 @@ ios or other os were never tested.
 * cordova-plugin-whitelist 1.3.3 "Whitelist"
 * io.gvox.plugin.phonecalltrap 0.1.2 "PhoneCallTrap"
 * net.coconauts.notification-listener 0.0.2 "Notification-listener"
+* cordova-plugin-local-notification 0.9.0-beta.2 "LocalNotification"
 
 ## TODO
 Interesting things to investigate would be to
