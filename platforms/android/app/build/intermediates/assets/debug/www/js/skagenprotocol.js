@@ -107,7 +107,7 @@ var signalMessage = function(skagendevice){
     01 = do not use them both
    */
    var onlyvibrate_16_17 = "b8"
-   var displaytime_18_19 = "0b"
+   var displaytime_18_19 = "2b"
 
    var toSend = initmessage_0_3
                 +"0f0a00" //seems to be a fixed value.

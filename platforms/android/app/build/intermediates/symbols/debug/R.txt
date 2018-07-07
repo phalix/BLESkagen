@@ -124,3 +124,4 @@ int styleable FontFamilyFont_font 0
 int styleable FontFamilyFont_fontStyle 1
 int styleable FontFamilyFont_fontWeight 2
 int xml config 0x7f0d0000
+int xml localnotification_provider_paths 0x7f0d0001

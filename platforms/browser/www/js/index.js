@@ -126,8 +126,25 @@ var app = {
           }
           self.update()
         }
-
+        cordova.plugins.backgroundMode.setDefaults({ 
+          "text": "Connected: "+newDeviceSelector.selectedDeviceAddress(),
+          "hidden": false
+         });
         cordova.plugins.backgroundMode.enable();
+        var updateStatus = function(){
+          cordova.plugins.backgroundMode.configure({ "text": "Connected: "+newDeviceSelector.selectedDeviceAddress() });
+          cordova.plugins.notification.local.schedule({
+            id: 1,
+            text: "BLESkagen running",
+            ongoing: true
+          })
+        }
+        updateStatus();
+        
+        
+        setInterval(
+          updateStatus
+        ,5000*2)
         self.activeGN = ko.observable(true);
 
         var restore = JSON.parse(localStorage.getItem("AllNotifications"))

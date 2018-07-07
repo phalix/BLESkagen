@@ -1,0 +1,120 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-badge@>=0.8.5",
+        "scope": null,
+        "escapedName": "cordova-plugin-badge",
+        "name": "cordova-plugin-badge",
+        "rawSpec": ">=0.8.5",
+        "spec": ">=0.8.5",
+        "type": "range"
+      },
+      "/Users/sehrbastian/Entwicklung/BLESkagen"
+    ]
+  ],
+  "_from": "cordova-plugin-badge@>=0.8.5",
+  "_id": "cordova-plugin-badge@0.8.7",
+  "_inCache": true,
+  "_location": "/cordova-plugin-badge",
+  "_nodeVersion": "7.10.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-badge-0.8.7.tgz_1516785492632_0.6922836808953434"
+  },
+  "_npmUser": {
+    "name": "katzer",
+    "email": "katzer@appplant.de"
+  },
+  "_npmVersion": "5.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-badge@>=0.8.5",
+    "scope": null,
+    "escapedName": "cordova-plugin-badge",
+    "name": "cordova-plugin-badge",
+    "rawSpec": ">=0.8.5",
+    "spec": ">=0.8.5",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-badge/-/cordova-plugin-badge-0.8.7.tgz",
+  "_shasum": "fe4942aa24af6822da85c01ccce6a831afff5931",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-badge@>=0.8.5",
+  "_where": "/Users/sehrbastian/Entwicklung/BLESkagen",
+  "author": {
+    "name": "Sebastián Katzer"
+  },
+  "bugs": {
+    "url": "https://github.com/katzer/cordova-plugin-badge/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-badge",
+    "platforms": [
+      "ios",
+      "osx",
+      "android",
+      "browser",
+      "windows"
+    ]
+  },
+  "dependencies": {},
+  "description": "Shows the count of unread messages as a badge on the app icon.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-s+s4yusKdeJ4sMPhQs4zR3lR2UuROzSy14GFAp00pTHPiBfCtxeINSUYAZYnpuO3RGx6PPlVCwSJpVG0IdM58g==",
+    "shasum": "fe4942aa24af6822da85c01ccce6a831afff5931",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-badge/-/cordova-plugin-badge-0.8.7.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6.0.0"
+    },
+    {
+      "name": "apple-ios",
+      "version": ">=10.0.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=4"
+    },
+    {
+      "name": "cordova-plugman",
+      "version": ">=4.2.0"
+    }
+  ],
+  "gitHead": "8d9da75f6faad24fdc904f1c1c5a3361cf030bdf",
+  "homepage": "https://github.com/katzer/cordova-plugin-badge#readme",
+  "keywords": [
+    "appplant",
+    "badge",
+    "shortcutbadger",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-osx",
+    "cordova-android",
+    "cordova-browser",
+    "cordova-windows"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "katzer",
+      "email": "katzer@appplant.de"
+    }
+  ],
+  "name": "cordova-plugin-badge",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katzer/cordova-plugin-badge.git"
+  },
+  "version": "0.8.7"
+}

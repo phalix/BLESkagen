@@ -196,6 +196,10 @@
         "source": "/Users/sehrbastian/Entwicklung/BLESkagen/platforms/android/app/src/main/res/drawable-port-ldpi/screen.png"
     },
     {
+        "merged": "/Users/sehrbastian/Entwicklung/BLESkagen/platforms/android/app/build/intermediates/res/merged/debug/xml_localnotification_provider_paths.xml.flat",
+        "source": "/Users/sehrbastian/Entwicklung/BLESkagen/platforms/android/app/src/main/res/xml/localnotification_provider_paths.xml"
+    },
+    {
         "merged": "/Users/sehrbastian/Entwicklung/BLESkagen/platforms/android/app/build/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
         "source": "/Users/sehrbastian/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/8ee92ef6d2b4a9489be80f94aa515dd3/res/layout/notification_template_icon_group.xml"
     },

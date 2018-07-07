@@ -25,6 +25,12 @@
     <feature name="NotificationListener">
         <param name="android-package" value="net.coconauts.notificationListener.NotificationCommands" />
     </feature>
+    <feature name="Badge">
+        <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
+    </feature>
     <name>BLESkagen</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -43,5 +49,5 @@
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="KeepRunning" value="true" />
-    <preference name="AndroidLaunchMode" value="singleInstance" />
+    <preference name="AndroidLaunchMode" value="singleTask" />
 </widget>

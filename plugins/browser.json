@@ -27,10 +27,16 @@
     },
     "net.coconauts.notification-listener": {
       "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.Bittmann.BLESkagen"
+    },
+    "cordova-plugin-badge": {
       "PACKAGE_NAME": "com.Bittmann.BLESkagen"
     }
   }

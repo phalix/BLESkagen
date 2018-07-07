@@ -32,7 +32,7 @@
     "/"
   ],
   "_resolved": "file:../NotificationListenerService/NotificationListener-cordova",
-  "_shasum": "d5d57f920d129703fca7b9b014a5b6c647158031",
+  "_shasum": "7758c81550feb6bf5975c3f93f496806b0c023e3",
   "_shrinkwrap": null,
   "_spec": "/Users/sehrbastian/Entwicklung/NotificationListenerService/NotificationListener-cordova",
   "_where": "/Users/sehrbastian/Entwicklung/BLESkagen",
@@ -46,7 +46,7 @@
       "version": ">=3.1.0"
     }
   ],
-  "gitHead": "4b951f2ad4fcb014e089a28ee7fee73b5d97ef9c",
+  "gitHead": "c2fd1e992efb87d1c9960006104857c9feb102eb",
   "issue": "https://github.com/coconauts/NotificationListener-cordova/issues",
   "keywords": [
     "notification",
