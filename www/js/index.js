@@ -102,6 +102,8 @@ var app = {
           if(objects){
             for(var key in objects){
               var new_o = objects[key];
+              var split_arr = new_o.package.split(".");
+              new_o.package = split_arr[split_arr.length-1];
               result.push(new_o);
             }
 
@@ -126,7 +128,7 @@ var app = {
           }
           self.update()
         }
-        cordova.plugins.backgroundMode.setDefaults({ 
+        cordova.plugins.backgroundMode.setDefaults({
           "text": "Connected: "+newDeviceSelector.selectedDeviceAddress(),
           "hidden": false
          });
@@ -140,8 +142,8 @@ var app = {
           })
         }
         updateStatus();
-        
-        
+
+
         setInterval(
           updateStatus
         ,5000*2)

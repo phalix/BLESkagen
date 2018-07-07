@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Jul 07 21:28:48 CEST 2018
+#Sat Jul 07 23:03:59 CEST 2018
 60.set=ANDROID_RESOURCE
 52.set=ANDROID_RESOURCE
 53.base=/Users/sehrbastian/Entwicklung/BLESkagen/platforms/android/app/build/intermediates/assets/debug
