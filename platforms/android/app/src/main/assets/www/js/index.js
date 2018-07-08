@@ -105,8 +105,8 @@ var app = {
           if(objects){
             for(var key in objects){
               var new_o = objects[key];
-              //var split_arr = new_o.package.split(".");
-              //new_o.package = split_arr[split_arr.length-1];
+              var split_arr = new_o.package.split(".");
+              new_o.package = split_arr[split_arr.length-1];
               result.push(new_o);
             }
 
