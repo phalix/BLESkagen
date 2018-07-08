@@ -43,8 +43,8 @@ var app = {
         }
 
         this.connect = function(address){
-          connect(address).then(
-            function(dev){
+          connect(address).then((dev) =>
+            {
               self.selectedDevice(dev);
               self.selectedDeviceAddress(address);
               localStorage.setItem("Address",address);
@@ -90,6 +90,9 @@ var app = {
 
       function setupListening(newDeviceSelector){
         var self = this;
+        //Reset session Counter.
+        sessionStorage.setItem('counter',0);
+
 
         this.availablePatterns = ko.observable(["04","05","06","07","08"]);
         this.availableIndicators = ko.observable([0,1,2,3,4,5,6,7,8]);
@@ -102,8 +105,8 @@ var app = {
           if(objects){
             for(var key in objects){
               var new_o = objects[key];
-              var split_arr = new_o.package.split(".");
-              new_o.package = split_arr[split_arr.length-1];
+              //var split_arr = new_o.package.split(".");
+              //new_o.package = split_arr[split_arr.length-1];
               result.push(new_o);
             }
 
@@ -130,23 +133,32 @@ var app = {
         }
         cordova.plugins.backgroundMode.setDefaults({
           "text": "Connected: "+newDeviceSelector.selectedDeviceAddress(),
-          "hidden": false
+          "hidden": true,
+          "silent": true
          });
         cordova.plugins.backgroundMode.enable();
         var updateStatus = function(){
-          cordova.plugins.backgroundMode.configure({ "text": "Connected: "+newDeviceSelector.selectedDeviceAddress() });
+          var counter = sessionStorage.getItem('counter');
+          cordova.plugins.backgroundMode.configure(
+            { 
+              "text": "Connected: "+newDeviceSelector.selectedDeviceAddress()+", C:"+counter
+          });
           cordova.plugins.notification.local.schedule({
             id: 1,
-            text: "BLESkagen running",
-            ongoing: true
+            text: "BLESkagen running C:"+counter,
+            sticky: true
           })
         }
         updateStatus();
+        newDeviceSelector.selectedDeviceAddress.subscribe(
+          ()=>{
+            updateStatus
+          }
+        );
 
-
-        setInterval(
+        /*setInterval(
           updateStatus
-        ,5000*2)
+        ,5000*2)*/
         self.activeGN = ko.observable(true);
 
         var restore = JSON.parse(localStorage.getItem("AllNotifications"))
@@ -161,6 +173,13 @@ var app = {
 
 
         this.signalMessageByPreference = function(indicator,pattern){
+          var counter = sessionStorage.getItem('counter');
+          if(!counter){
+            counter= 0
+          }
+          counter++;
+          sessionStorage.setItem('counter',counter);
+          updateStatus();
           signalMessage_advanced(
             newDeviceSelector.selectedDevice(),
             pattern,

@@ -1,4 +1,4 @@
-#Sat Jul 07 23:03:58 CEST 2018
+#Sun Jul 08 23:41:04 CEST 2018
 base.0=/Users/sehrbastian/Entwicklung/BLESkagen/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 file.0=/Users/sehrbastian/Entwicklung/BLESkagen/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
