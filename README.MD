@@ -14,6 +14,8 @@ You need to have node.js, cordova and android studio installed to run the projec
 This Project heavily depends on cordova and some plugins.
 Download the project and start it with
 ```
+npm install
+cordova platform add android
 cordova run android
 ```
 ios or other os were never tested.
