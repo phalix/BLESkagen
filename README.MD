@@ -20,7 +20,8 @@ cordova run android
 ```
 ios or other os were never tested.
 
-![App Screenshot](https://user-images.githubusercontent.com/2444534/42414681-86897ba0-823a-11e8-97e2-15a8cecce4d8.jpg)
+![App Screenshot](https://github.com/ramod/BLESkagen/blob/develop/www/img/screenshot.png)
+
 
 
 ## Plugins used
