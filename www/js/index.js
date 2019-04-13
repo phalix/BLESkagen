@@ -20,6 +20,7 @@
 var app = {
   // Application Constructor
   initialize: function () {
+    console.log('BLESkagen deviceready')
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
   },
 
@@ -91,7 +92,8 @@ var app = {
       sessionStorage.setItem('counter', 0);
 
       this.availablePatterns = ko.observable(["04", "05", "06", "07", "08"]);
-      this.availableIndicators = ko.observable([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+      this.availableMins = ko.observable(['black', 'green', 'blue', 'white', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']);
+      this.availableHours = ko.observable(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']);
       this.availableStates = ko.observable([0, 1]);
 
       this.packages = ko.observable([]);
@@ -101,8 +103,6 @@ var app = {
         if (objects) {
           for (var key in objects) {
             var new_o = objects[key];
-            var split_arr = new_o.package.split(".");
-            new_o.package = split_arr[split_arr.length - 1];
             result.push(new_o);
           }
 
@@ -114,24 +114,46 @@ var app = {
       this.changeStatePackage = function (e) {
         var objects = JSON.parse(localStorage.getItem("packages"));
         if (objects) {
-          if (objects[e.package].active == 0) {
-            objects[e.package].active = 1;
+          if (objects[e.key].active == 0) {
+            objects[e.key].active = 1;
           } else {
-            objects[e.package].active = 0;
+            objects[e.key].active = 0;
           }
-          objects[e.package].active = e.active;
-          objects[e.package].indicator = e.indicator;
-          objects[e.package].pattern = e.pattern;
+          objects[e.key].active = e.active;
+          objects[e.key].min = e.min;
+          objects[e.key].hour = e.hour;
+          objects[e.key].pattern = e.pattern || '05';
           localStorage.setItem("packages", JSON.stringify(objects));
         }
         self.update()
       }
+      this.deleteStatePackage = function (e) {
+        var objects = JSON.parse(localStorage.getItem("packages"));
+        if (objects) {
+          if (objects[e.key]) {
+            delete objects[e.key]
+          } 
+          localStorage.setItem("packages", JSON.stringify(objects));
+        }
+        self.update()
+      }
+      this.deleteAllPackages = function (e) {
+        var objects = {}
+        localStorage.setItem("packages", JSON.stringify(objects));
+        self.update()
+      }
+
       cordova.plugins.backgroundMode.setDefaults({
         "text": "Connected: " + newDeviceSelector.selectedDeviceAddress(),
         "hidden": true,
         "silent": true
       });
       cordova.plugins.backgroundMode.enable();
+      cordova.plugins.notification.local.on('stop', function (notification, eopts) { 
+        cordova.plugins.backgroundMode.disable();
+        cordova.plugins.notification.local.clear(1, null);
+        navigator.app.exitApp();
+       });
       var updateStatus = function () {
         var counter = sessionStorage.getItem('counter');
         cordova.plugins.backgroundMode.configure(
@@ -141,7 +163,10 @@ var app = {
         cordova.plugins.notification.local.schedule({
           id: 1,
           text: "BLESkagen running C:" + counter,
-          sticky: true
+          sticky: true,
+          actions: [
+            { id: 'stop', title: 'Stop' }
+        ]
         })
       }
       updateStatus();
@@ -151,10 +176,8 @@ var app = {
         }
       );
 
-      /*setInterval(
-        updateStatus
-      ,5000*2)*/
       self.activeGN = ko.observable(true);
+      self.busyGN = ko.observable(false);
 
       var restore = JSON.parse(localStorage.getItem("AllNotifications"))
       if (restore != null) {
@@ -166,7 +189,14 @@ var app = {
         localStorage.setItem("AllNotifications", self.activeGN());
       }
 
-      this.signalMessageByPreference = function (indicator, pattern) {
+      this.signalMessageByPreference = function (hour, min, pattern) {
+        var colour = null
+        if (isNaN(min)) {
+          colour = min
+        }
+        hour = parseInt(hour) || 0
+        min = parseInt(min) || 0
+
         var counter = sessionStorage.getItem('counter');
         if (!counter) {
           counter = 0
@@ -176,21 +206,28 @@ var app = {
         updateStatus();
         signalMessage_advanced(
           newDeviceSelector.selectedDevice(),
-          pattern,
-          calculateIndicator(indicator),
-          calculateIndicator(indicator)
+          hour,
+          min,
+          colour,
+          pattern
         ).then(e => console.log(e));
       }
-
       notificationListener.listen(function (n) {
+        var key = n.package + ': ' + n.title;
+        console.log('package ' + JSON.stringify(n));
         if (self.activeGN() == true) {
           var objects = JSON.parse(localStorage.getItem("packages"));
-          if (objects && objects[n.package] && objects[n.package].active == 1) {
+          if (objects && objects[key] && objects[key].active == 1) {
             if (newDeviceSelector.selectedDevice().address) {
-              self.signalMessageByPreference(
-                objects[n.package].indicator,
-                objects[n.package].pattern
-              );
+              if (self.busyGN() == false) {
+                self.busyGN(true)
+                setTimeout(function(){ self.busyGN(false) }, 2000);
+                self.signalMessageByPreference(
+                  objects[key].hour,
+                  objects[key].min,
+                  objects[key].pattern,
+                );
+              }
             }
           }
 
@@ -201,12 +238,16 @@ var app = {
         } else {
           packages = JSON.parse(packages);
         }
-        if (!packages[n.package]) {
+        
+        if (!packages[key]) {
+          n.key = key;
           n.active = 0;
-          n.indicator = 0;
-          n.pattern = "04";
-          packages[n.package] = n;
+          n.hour = '0';
+          n.min = '0';
+          n.pattern = "05";
+          packages[key] = n;
           localStorage.setItem("packages", JSON.stringify(packages));
+          console.log('packages ' + JSON.stringify(packages));
         } else {
           //Nothing to do, package already known
         }
@@ -219,8 +260,10 @@ var app = {
 
     ko.applyBindings(setupListening(ds), document.getElementById("listener"));
 
-    var phoneCallNotifier = function (newDeviceSelector) {
+    //  //////////////////////////////////////////////////////////////////////
 
+    var phoneCallNotifier = function (newDeviceSelector) {
+      console.log("init phoneCallNotifier");
       var self = this;
 
       self.availableIndicatorsPhone = ko.observable([0, 1, 2, 3, 4, 5, 6, 7, 8]);
@@ -290,9 +333,10 @@ var app = {
               if (newDeviceSelector.selectedDevice().address) {
                 signalMessage_advanced(
                   newDeviceSelector.selectedDevice(),
-                  self.vibratingPattern(),
-                  calculateIndicator(self.indicatorPhone()),
-                  calculateIndicator(self.indicatorPhone())
+                  self.indicatorPhone(),
+                  self.indicatorPhone(),
+                  null,
+                  self.vibratingPattern()
                 ).then(e => console.log(e));
               }
             }
@@ -307,7 +351,7 @@ var app = {
         }
       });
     }
-    ko.applyBindings(phoneCallNotifier(ds), document.getElementById("phone"));
+    // ko.applyBindings(phoneCallNotifier(ds),document.getElementById("phone"));
 
   }
 };

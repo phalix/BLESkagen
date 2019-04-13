@@ -33,12 +33,14 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>BLESkagen</title>
+        <title>BLE Skagen</title>
     </head>
     <body>
         <div class="app">
           <div id="bluetoothselector">
-            <h1> Select an already Connected Smartwatch </h1>
+            <h1>BLE Skagen</h1>
+
+            <h3> Select a Connected Smartwatch </h3>
             <table>
                 <thead>
                     <tr><th>Address</th><th>Name</th></tr>
@@ -51,38 +53,58 @@
                     </tr>
                 </tbody>
             </table>
-
             <button data-bind="click: refreshDevices">Refresh</button>
+
+            <h3> Connected Smartwatch </h3>
             <div>Connected to <b data-bind="text: selectedDeviceAddress"></b></div>
           </div>
-          <div id="batteryInfo">
-            <button data-bind="click: fetchBatteryLevel">Get Battery Level</button>
-            <b data-bind="text: batterylevel"></b>
+          <div>
+              <div style="display:inline-block;margin-right: 16px;padding: 0;" id="notifier">
+                  <button data-bind="click: notify">Notifiy</button>
+              </div>
+              <div style="display:inline-block;margin-right: 16px;padding: 0;" id="batteryInfo">
+                <button data-bind="click: fetchBatteryLevel">Get Battery Level</button>
+                <b data-bind="text: batterylevel"></b>
+            </div>
           </div>
-          <div id="notifier">
-            <button data-bind="click: notify">Notifiy</button>
-          </div>
+          
+
           <div id="listener">
             <h3>General Notification</h3>
-            <button data-bind="click: changeStateGN, text:activeGN() ? 'Active' : 'Inactive' "></button>
-            <table style="left: -70px;font-size: 7pt;position: relative;">
+            <div>
+                <button style="margin-right: 16px;" data-bind="click: changeStateGN, text:activeGN() ? 'Active' : 'Inactive' "></button>
+                <button data-bind="click: update">Refresh</button>
+                <button style="float:right;margin:0" data-bind="click: deleteAllPackages">Delete All</button>
+            </div>
+            
+            <div data-bind="text:busyGN() ? 'Busy' : 'Ready' "></div>
+            <table cellpadding="0" cellspacing="0">
                 <thead>
-                    <tr><th>Package</th><th>Active</th><th>Pattern</th><th>Indicator</th></tr>
+                    <tr>
+                      <th>Active</th>
+                      <th>Min</th>
+                      <th>Hour</th>
+                      <th>Buzz</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
                 </thead>
                 <tbody data-bind="foreach: packages">
-                    <tr>
-                        <td data-bind="text: package"></td>
-                        <td><select data-bind="options: availableStates, value:active"></select></td>
-                        <td><select data-bind="options: availablePatterns, value:pattern"></select></td>
-                        <td><select data-bind="options: availableIndicators, value:indicator"></select></td>
-                        <td><button data-bind="click: changeStatePackage">Save</button></td>
+                  <tr>
+                        <td colspan="5" data-bind="text: key"></td>
+                  </tr>  
+                  <tr>
+                        <td class="divide"><select data-bind="options: availableStates, value:active"></select></td>
+                        <td class="divide"><select data-bind="options: availableMins, value:min"></select></td>
+                        <td class="divide"><select data-bind="options: availableHours, value:hour"></select></td>
+                         <td class="divide"><select data-bind="options: availablePatterns, value:pattern"></select></td>
+                        <td class="divide"><button data-bind="click: changeStatePackage">Save</button></td>
+                        <td class="divide" style="margin-left:16px"><button data-bind="click: deleteStatePackage">x</button></td>
                     </tr>
                 </tbody>
             </table>
-            <button data-bind="click: update">Refresh</button>
-
           </div>
-          <div id="phone">
+          <!-- <div id="phone" style="display:none">
             <h3>Phone Call Notification</h3>
             <button data-bind="click: changeState, text:active() ? 'Active' : 'Inactive' "></button>
             <div>
@@ -100,7 +122,7 @@
             <br/>
             <br/>
           </div>
-        </div>
+        </div> -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/skagenprotocol.js"></script>
         <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
